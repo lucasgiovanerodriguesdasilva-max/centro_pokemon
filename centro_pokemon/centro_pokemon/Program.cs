@@ -12,7 +12,7 @@ namespace centro_pokemon
         static void Main(string[] args)
         {
             int opcao = 0;
-            while (opcao != 6 )
+            while (opcao != 6)
             {
 
                 Console.Clear();
@@ -43,12 +43,16 @@ namespace centro_pokemon
                         Cadastropokemon();
                         break;
                     case 2:
+                        pokebolas();
                         break;
                     case 3:
+                        treine();
                         break;
                     case 4:
+                        cidade();
                         break;
                     case 5:
+                        ginasio();
                         break;
                     case 6:
                         break;
@@ -59,13 +63,6 @@ namespace centro_pokemon
                         Thread.Sleep(2000);  // pausa a programacao por 2 segundos 
 
                         break;
-
-
-
-
-
-
-
 
                 }
             }
@@ -98,7 +95,7 @@ namespace centro_pokemon
 
             Console.WriteLine("\n qtd evolucao do pokemon:");
             int qtdevolucao = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= qtdevolucao; i++) ;
+            for (int i = 1; i <= qtdevolucao; i++)
             {
                 Console.WriteLine($"\n golpe do{i} pokemon: ");
                 string evolucaopokemon = Console.ReadLine();
@@ -108,24 +105,125 @@ namespace centro_pokemon
             string elementopokemon = Console.ReadLine();
 
             Console.WriteLine("\n fraqueza do pokemon: ");
-            int fraquezapokemon =int.Parse(Console.ReadLine());
+            int fraquezapokemon = int.Parse(Console.ReadLine());
             for (int i = 1; i <= fraquezapokemon; i++)
             {
                 Console.WriteLine("\n fraqueza {i} do pokemon: ");
+                string fraqueza = Console.ReadLine();
             }
-                
+            Console.WriteLine("\n raridade do pokemon: ");
+            string raridadepokemon = Console.ReadLine();
+            Console.WriteLine("\n peso do pokemon: ");
+            double pesopokemon = double.Parse(Console.ReadLine());
+            Console.WriteLine("\n cadratro finalizado!!! ");
+            Thread.Sleep(2000);
+
+        }
+        static void pokebolas()
+
+        {
 
 
+            Console.Clear();
 
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
 
+            Console.BackgroundColor = ConsoleColor.Blue;
+
+            Console.WriteLine(@"
+██████╗░░█████╗░██╗░░██╗███████╗██████╗░░█████╗░██╗░░░░░░█████╗░
+██╔══██╗██╔══██╗██║░██╔╝██╔════╝██╔══██╗██╔══██╗██║░░░░░██╔══██╗
+██████╔╝██║░░██║█████═╝░█████╗░░██████╦╝██║░░██║██║░░░░░███████║
+██╔═══╝░██║░░██║██╔═██╗░██╔══╝░░██╔══██╗██║░░██║██║░░░░░██╔══██║
+██║░░░░░╚█████╔╝██║░╚██╗███████╗██████╦╝╚█████╔╝███████╗██║░░██║");
+            Console.ResetColor();
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("\n Tipo da Pokebola: ");
+            string kind = Console.ReadLine();
+            Console.WriteLine("\n Cor da Pokebola: ");
+            string color = Console.ReadLine();
+            Console.WriteLine("\n Possibilidade de captura da Pokebola: ");
+            string poss = Console.ReadLine();
+            Thread.Sleep(2000);
+
+        }
+
+    
+    
+    
+      static void treine()
+
+        {
+
+            Console.Clear();
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine(@"
+████████╗██████╗░███████╗██╗███╗░░██╗░█████╗░██████╗░░█████╗░██████╗░
+╚══██╔══╝██╔══██╗██╔════╝██║████╗░██║██╔══██╗██╔══██╗██╔══██╗██╔══██╗
+░░░██║░░░██████╔╝█████╗░░██║██╔██╗██║███████║██║░░██║██║░░██║██████╔╝
+░░░██║░░░██╔══██╗██╔══╝░░██║██║╚████║██╔══██║██║░░██║██║░░██║██╔══██╗
+░░░██║░░░██║░░██║███████╗██║██║░╚███║██║░░██║██████╔╝╚█████╔╝██║░░██║");
+
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("\n Nome: ");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Sua idade: ");
+            string age = Console.ReadLine();
+            Console.WriteLine("\n Quantos Pokémons você possui", nome, ": ");
+            int qtdpoke = int.Parse(Console.ReadLine());
+            for (int i = 1; i < qtdpoke; i++)
+            {
+                Console.WriteLine($"\n Qual o nome do {i} Pokémon");
+                string nomepoke = Console.ReadLine();
             }
-            
+            Console.WriteLine("\nQuantas vitória você possuiu, ", nome, ": ");
+            string qtdvic = Console.ReadLine();
+            Console.WriteLine("\n ", nome, ", Qual sua terra natal: ");
+            string reg = Console.ReadLine();
+            Thread.Sleep(2000);
+        }
+        static void cidade()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine(@"
+░█████╗░██╗██████╗░░█████╗░██████╗░███████╗
+██╔══██╗██║██╔══██╗██╔══██╗██╔══██╗██╔════╝
+██║░░╚═╝██║██║░░██║███████║██║░░██║█████╗░░
+██║░░██╗██║██║░░██║██╔══██║██║░░██║██╔══╝░░
+╚█████╔╝██║██████╔╝██║░░██║██████╔╝███████╗");
 
-
-
-            }
-
-        
-
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("\n Nome da cidade:");
+            string cidade = Console.ReadLine();
+            Console.WriteLine("\n Região: ");
+            string regiao = Console.ReadLine();
+            Thread.Sleep(2000);
+        }
+        static void ginasio()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine(@"
+░██████╗░██╗███╗░░██╗░█████╗░░██████╗██╗░█████╗░
+██╔════╝░██║████╗░██║██╔══██╗██╔════╝██║██╔══██╗
+██║░░██╗░██║██╔██╗██║███████║╚█████╗░██║██║░░██║
+██║░░╚██╗██║██║╚████║██╔══██║░╚═══██╗██║██║░░██║
+╚██████╔╝██║██║░╚███║██║░░██║██████╔╝██║╚█████╔╝");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("\n Nome do Ginásio:");
+            string gin = Console.ReadLine();
+            Console.WriteLine("Dono do Ginásio:");
+            string dono = Console.ReadLine();
+        }
     }
-}
+}   
